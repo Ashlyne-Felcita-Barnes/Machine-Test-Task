@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>App</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+            body {
+                font-family: 'Poppins', sans-serif; /* Applying Poppins font */
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            .checked {
+                color: orange;
+            }
+
+            .image-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 20px;
+            }
+
+            .image-container img {
+                margin: 10px 0;
+                max-width: 100%; 
+                height: auto;
+            }
+
+            form {
+                width: 100%;
+                max-width: 400px; 
+                margin-top: 20px;
+            }
+
+            form label {
+                display: block;
+                margin-bottom: 5px;
+                text-align: left;
+            }
+
+            form select, 
+            form input[type="text"], 
+            form input[type="radio"], 
+            form input[type="checkbox"], 
+            form textarea,
+            form input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px; 
+            }
+
+            form input[type="submit"] {
+                background-color: #af4c4c;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            h2, p {
+                margin: 10px 0;
+            }
+
+            @media (max-width: 600px) {
+                h2 {
+                    font-size: 1.2em;
+                }
+
+                p {
+                    font-size: 1em;
+                }
+
+                form label, 
+                form input[type="radio"], 
+                form input[type="checkbox"], 
+                form select {
+                    font-size: 1em;
+                }
+
+                .image-container img {
+                    width: 80%; 
+                    height: auto;
+                }
+            }
+        </style>
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="image-container">
+                <img src="name.jpg" alt="Logo" width="200px" height="96px"/>
+                <br>
+                <img src="logo.jpg" alt="UserProfile" width="393px" height="160px"/>
+            </div>
+        </header>
+
+        <h2>HELLO, THANKS FOR VISITING</h2>
+        <p>Please help me to improve our cafe services by filling in our feedback form. Thank you!</p>
+        
+        <form>
+            <!-- Visit Frequency -->
+            <label for="visit"><strong>  HOW OFTEN DO YOU VISIT HERE?</strong></label>
+            <select name="visit" id="visit">
+                <option value="Regularly">Regularly</option>
+                <option value="Weekend">Weekend</option>
+            </select>
+            <P> </P>
+
+            <!-- Food Quality -->
+            <h3>QUALITY OF THE FOOD</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <P> </P>
+
+
+            <!-- Service Quality -->
+            <h3>SERVICE QUALITY</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <P> </P>
+
+            <!-- Overall Experience -->
+            <h3>OVERALL EXERIENCE</h3>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span> 
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <P> </P>
+
+            <!-- Recommendation -->
+            <label for="recommend"><strong>WOULD YOU RECOMMEND OUR RESTAURANT TO OTHERS?</strong></label>
+            <div style="display: flex; align-items: center; justify-content: center; margin-top: 5px;"> 
+                <label style="display: flex; align-items: center; margin: 0;">
+                    <input type="radio" id="recommend-yes" name="recommend" value="YES" style="margin: 0 5px 0 0;">Yes
+                </label>
+    
+                <label style="display: flex; align-items: center; margin: 0 0 0 20px;"> 
+                    <input type="radio" id="recommend-no" name="recommend" value="NO" style="margin: 0 5px 0 0;">No
+                </label>
+            </div>
+
+            <P> </P>
+
+            <!-- Suggestions -->
+            <label for="suggest"><strong>YOUR SUGGESTIONS TO IMPROVE</strong></label><br>
+            <textarea id="suggest" name="suggestion" style="width: 100%; min-height: 200px; resize: vertical; border-radius: 10px;"></textarea><br>
+            <P> </P>
+
+            <!-- Follow Up -->
+            <label style="display: flex; align-items: center; margin: 0;">
+                <input type="checkbox" id="follow" name="follow_up" style="margin: 0;"> 
+                <span><strong>RECEIVE PERSONAL FOLLOW UP TO YOUR FEEDBACK</strong></span>
+            </label><br>
+
+            <!-- Submit Button -->
+            <input type="submit" value="SUBMIT FEEDBACK">
+        </form>
+    </body>
+</html>
